@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Skhacking.com - Cyber Security Toolkit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white font-sans min-h-screen">
+
+    <!-- হেডার - আপনার নাম অনুযায়ী -->
+    <div class="relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
+        </div>
+        
+        <header class="relative z-10 text-center py-8 px-4">
+            <h1 class="text-4xl md:text-5xl font-bold">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                    Skhacking.com
+                </span>
+            </h1>
+            <p class="text-gray-400 mt-2 text-lg">Your Ultimate Cyber Security Toolkit</p>
+        </header>
+    </div>
+
+    <!-- সার্চ বার -->
+    <div class="max-w-xl mx-auto px-4 mb-6 sticky top-4 z-20">
+        <div class="relative backdrop-blur-lg bg-gray-800/80 rounded-2xl border border-gray-700">
+            <input type="text" id="searchInput" placeholder="🔍 Search tools..." 
+                   class="w-full p-4 bg-transparent text-white rounded-2xl focus:outline-none">
+            <i class="fas fa-search absolute right-4 top-4 text-gray-400"></i>
+        </div>
+    </div>
+
+    <!-- ক্যাটাগরি ট্যাব - মোবাইল ফ্রেন্ডলি স্ক্রোল -->
+    <div class="overflow-x-auto scrollbar-hide px-4 mb-6">
+        <div class="flex space-x-3 min-w-max pb-2">
+            <button class="category-btn active px-6 py-3 rounded-full bg-blue-600 text-white font-medium shadow-lg" data-category="all">All</button>
+            <button class="category-btn px-6 py-3 rounded-full bg-gray-800 text-gray-300 font-medium border border-gray-700" data-category="generators">Generators</button>
+            <button class="category-btn px-6 py-3 rounded-full bg-gray-800 text-gray-300 font-medium border border-gray-700" data-category="checkers">Checkers</button>
+            <button class="category-btn px-6 py-3 rounded-full bg-gray-800 text-gray-300 font-medium border border-gray-700" data-category="utilities">Utilities</button>
+            <button class="category-btn px-6 py-3 rounded-full bg-gray-800 text-gray-300 font-medium border border-gray-700" data-category="encryption">Encryption</button>
+        </div>
+    </div>
+
+    <!-- টুলস গ্রিড - মোবাইলের জন্য 2 কলাম -->
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3" id="toolsContainer"></div>
+    </div>
+
+    <!-- ফুটার -->
+    <footer class="text-center text-gray-500 py-6 mt-8 border-t border-gray-800">
+        <p class="text-sm">© 2024 Skhacking.com - Educational Purpose Only</p>
+        <p class="text-xs mt-2 text-gray-600">Use responsibly • Ethical hacking only</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
